@@ -161,8 +161,8 @@ export function ProductForm({ product }: ProductFormProps) {
 
       const response = await fetch(
         product?.id
-          ? `http://localhost:5000/products/${product.id}/update`
-          : "http://localhost:5000/products",
+          ? `https://full-stack-ecommerce-backend-4yza.onrender.com/products/${product.id}/update`
+          : "https://full-stack-ecommerce-backend-4yza.onrender.com/products",
         {
           method: product?.id ? "PATCH" : "POST",
           headers: { "Content-Type": "application/json" },

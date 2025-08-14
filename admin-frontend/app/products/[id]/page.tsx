@@ -16,7 +16,7 @@ interface ProductPageProps {
 
 async function getProductById(id: string) {
   try {
-    const res = await fetch(`http://localhost:5000/products/${id}`, {
+    const res = await fetch(`https://full-stack-ecommerce-backend-4yza.onrender.com/products/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
@@ -32,7 +32,7 @@ async function getProductById(id: string) {
 export async function softDeleteProduct(id: string) {
   try {
     const res = await fetch(
-      `http://localhost:5000/products/${id}/soft-delete`,
+      `https://full-stack-ecommerce-backend-4yza.onrender.com/products/${id}/soft-delete`,
       {
         method: "PATCH",
         headers: {
@@ -53,7 +53,7 @@ export async function softDeleteProduct(id: string) {
 
 export async function hardDeleteProduct(id: string) {
   try {
-    const res = await fetch(`http://localhost:5000/products/${id}`, {
+    const res = await fetch(`https://full-stack-ecommerce-backend-4yza.onrender.com/products/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ export async function hardDeleteProduct(id: string) {
 
 export async function restoreProduct(id: string) {
   try {
-    const res = await fetch(`http://localhost:5000/products/${id}/restore`, {
+    const res = await fetch(`https://full-stack-ecommerce-backend-4yza.onrender.com/products/${id}/restore`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

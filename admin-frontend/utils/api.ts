@@ -15,7 +15,7 @@ export const bulkSoftDeleteProducts = async (
 ): Promise<BulkOperationResult> => {
   try {
     const response = await fetch(
-      "http://localhost:5000/products/soft-delete-many",
+      "https://full-stack-ecommerce-backend-4yza.onrender.com/products/soft-delete-many",
       {
         method: "PATCH",
         headers: {
@@ -54,7 +54,7 @@ export const bulkHardDeleteProducts = async (
 ): Promise<BulkOperationResult> => {
   try {
     const response = await fetch(
-      "http://localhost:5000/products/hard-delete-many",
+      "https://full-stack-ecommerce-backend-4yza.onrender.com/products/hard-delete-many",
       {
         method: "DELETE",
         headers: {
@@ -93,7 +93,7 @@ export const bulkRestoreProducts = async (
 ): Promise<BulkOperationResult> => {
   try {
     const response = await fetch(
-      "http://localhost:5000/products/restore-many",
+      "https://full-stack-ecommerce-backend-4yza.onrender.com/products/restore-many",
       {
         method: "PATCH",
         headers: {

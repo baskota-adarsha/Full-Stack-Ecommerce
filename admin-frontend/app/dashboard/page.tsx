@@ -42,7 +42,7 @@ const getCategoryColor = (categoryName: string, index: number) => {
 };
 
 async function getProducts(): Promise<ProductsResponse> {
-  const res = await fetch("http://localhost:5000/products?limit=6", {
+  const res = await fetch("https://full-stack-ecommerce-backend-4yza.onrender.com/products?limit=6", {
     cache: "no-store",
   });
   if (!res.ok) {
@@ -57,9 +57,12 @@ async function getProducts(): Promise<ProductsResponse> {
 async function getNumberOfProductsByCategories(): Promise<
   CategoryCountResponse[]
 > {
-  const res = await fetch("http://localhost:5000/products-analytics", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://full-stack-ecommerce-backend-4yza.onrender.com/products-analytics",
+    {
+      cache: "no-store",
+    }
+  );
   if (!res.ok) {
     throw new Error(
       `Failed to fetch category analytics: ${res.status} ${res.statusText}`
@@ -70,7 +73,7 @@ async function getNumberOfProductsByCategories(): Promise<
 
 async function getNumberOfDeletedProducts(): Promise<DeletedProductsResponse> {
   const res = await fetch(
-    "http://localhost:5000/products-analytics/numberOfDeletedProducts",
+    "https://full-stack-ecommerce-backend-4yza.onrender.com/products-analytics/numberOfDeletedProducts",
     {
       cache: "no-store",
     }
@@ -85,7 +88,7 @@ async function getNumberOfDeletedProducts(): Promise<DeletedProductsResponse> {
 
 async function getNumberOfLowStockProducts(): Promise<LowStockProductsResponse> {
   const res = await fetch(
-    "http://localhost:5000/products-analytics/numberOfLowStockProducts",
+    "https://full-stack-ecommerce-backend-4yza.onrender.com/products-analytics/numberOfLowStockProducts",
     {
       cache: "no-store",
     }

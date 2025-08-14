@@ -59,7 +59,7 @@ export function ProductsWrapper({
         }
 
         const res = await fetch(
-          `http://localhost:5000/products?${params.toString()}`,
+          `https://full-stack-ecommerce-backend-4yza.onrender.com/products?${params.toString()}`,
           { cache: "no-store" }
         );
 
